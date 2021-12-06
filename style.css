@@ -1,0 +1,19 @@
+.login{
+    background-image: url(../buku.jpg);
+}
+#text{
+    color:white;
+    text-align: center;
+}
+.content{
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-top: 240px;
+}
+.form-control{
+    width: 350px;
+}
+#tombolLogin{
+    width: 350px;
+}
+
