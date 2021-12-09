@@ -3,12 +3,29 @@
 }
 #text{
     color:white;
+    padding-left: 126px;
+}
+.loginBox{
+    background:#8E806A;
+    color: white;
+    box-sizing: border-box;
+    width: 500px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    top: 30%;
+    left: 35%;
+    position: absolute;
+    height: 300px;
+}
+form{
+    padding-top: 15px;
+    padding-left: 78px;
+}
+.inputEmail :placeholder-shown{
     text-align: center;
 }
-.content{
-    margin-left: 600px;
-    margin-right: 600px;
-    margin-top: 240px;
+.inputPass :placeholder-shown{
+    text-align: center;
 }
 .form-control{
     width: 350px;
