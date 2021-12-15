@@ -2,8 +2,6 @@ body{
     margin: 0px;
     background-color:#EDEEEF;
 }
-
-
 #navbar{
 	justify-content: center;
 	overflow:hidden;
@@ -32,8 +30,23 @@ body{
 	float: right;
 	padding: 13px 20px;
 }
-
-
+.search{
+    color: black;
+    display: block;
+    float: left;
+    padding: 24px 20px;
+}
+#filter{
+    width: 115px; 
+    border-radius: 5px;
+    float: left;
+    padding: 8px;
+}
+#txtSearch{
+    float: left;
+    width: 170px;
+    padding: 14px;
+}
 #body{
     justify-content: center;
     padding-bottom: 1000px;
