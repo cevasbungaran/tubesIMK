@@ -1,0 +1,68 @@
+body{
+    margin: 0px;
+    background-color:#EDEEEF;
+}
+#navbar{
+	justify-content: center;
+	overflow:hidden;
+	box-sizing: border-box;
+	color: white;
+	background-color: #8e806a;
+    padding: 13px 30px;
+}
+#navbar img{
+	float: left;
+	display: block;
+	color: white;
+	padding: 0px 100px 0px 0px;
+}
+#navbar a{
+	font-family: arial;
+	font-size: 40px;
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 13px 50px;
+	text-decoration: none;
+}
+#navbar a.right{
+	float: right;
+	padding: 13px 20px;
+}
+.search{
+    color: black;
+    display: block;
+    float: left;
+    padding: 24px 20px;
+}
+#filter{
+    width: 115px; 
+    border-radius: 5px;
+    float: left;
+    padding: 8px;
+}
+#txtSearch{
+    float: left;
+    width: 170px;
+    padding: 14px;
+}
+#body{
+    justify-content: center;
+    padding-bottom: 1000px;
+}
+
+#box{
+    text-align: justify;
+    position: absolute;
+    top: 250px;
+    left: 325px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 20px grey;
+}
+#box h2{
+    font-size: 25px;
+    font-weight:bold;
+}
