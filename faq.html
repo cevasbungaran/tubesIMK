@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <head>
+            <title>FAQ Toko Buku PAK JOHN </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="styleFaq.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+              crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+          </head>
     </head>
     <body>
-        <div class="navbar">
-            <img src="" alt="logo_toko">
-            <a href="#katalog">Katalog</a>
-            <a class="active" href="#faq">FAQ</a>
-            <div class="navkanan">
-                <img src="" alt="keranjang">
-                <input type="text" placeholder="Type author's name here" name="search">
-                <div class="dropdown">
-                    <button class="dropbtn">Author
-                      <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                      <a href="#">Author</a>
-                      <a href="#">Book</a>
-                      <a href="#">ISBN</a>
-                    </div>
-                    <img src="" alt="profile">
-                </div>
+        <nav id="navbar">
+            <img src="images/logo.png" height="110 px" alt="RabenLogo">
+            <a href="#">Katalog</a>
+            <a href="#">FAQ</a>
+            <a href="#">
+              <img src="images/keranjang.png" height="60 px" alt="keranjanglogo">
+            </a>
+            <div class="search">
+              <select class="form-select" id="filter" aria-label="Default select example">
+                <option selected>Author</option>
+                <option value="1">Book's Title</option>
+                <option value="2">ISBN</option>
+            </select>
+            <input type="text" class="form-control" name="txtSearch" id="txtSearch" placeholder="Search">
             </div>
-        </div>
+            <a href="Login.html" class="right">
+              Sign In
+            </a>
+          </nav>
         <div>
-            <h2>1. Bagaimana proses pengiriman buku?</h2>
-            <p>Pengiriman dilakukan setiap hari pukul 4 sore diatas itu akan dikirimkan besok harinya.</p>
-            <h2>2. Berapa lama garansi buku berlaku?</h2>
-            <p>Garansi berlaku  selama 1 minggu setelah buku diterima pembeli.</p>
-            <h2>3. Apa saja kriteria buku agar dapat klaim garansi?</h2>
-            <p>a. kriteria 1</p>
-            <p>b. kriteria 2</p>
-            <p>c. kriteria 3</p>
-            <h2>3. Bagaimana cara mengembalikan buku jika ada keluhan?</h2>
-            <p>untuk pengembalian buku dapat menghubungi nomor WA : 08XXXXXXXXXXX untuk arahan selanjutnya.</p>
+            <div id="box">
+                <h2>1. Bagaimana proses pengiriman buku?</h2>
+                <p>Pengiriman dilakukan setiap hari pukul 4 sore diatas itu akan dikirimkan besok harinya.</p>
+                <h2>2. Berapa lama garansi buku berlaku?</h2>
+                <p>Garansi berlaku  selama 1 minggu setelah buku diterima pembeli.</p>
+                <h2>3. Apa saja kriteria buku agar dapat klaim garansi?</h2>
+                <p>a. kriteria 1</p>
+                <p>b. kriteria 2</p>
+                <p>c. kriteria 3</p>
+                <h2>3. Bagaimana cara mengembalikan buku jika ada keluhan?</h2>
+                <p>untuk pengembalian buku dapat menghubungi nomor WA : 08XXXXXXXXXXX untuk arahan selanjutnya.</p>
+            </div>
         </div>
     </body>
 </html>
