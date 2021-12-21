@@ -1,0 +1,36 @@
+.Register{
+    background-image: url(../buku.jpg);
+}
+#text{
+    color:white;
+    padding-left: 126px;
+}
+.registerBox{
+    background:#8E806A;
+    color: white;
+    box-sizing: border-box;
+    width: 500px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    top: 30%;
+    left: 35%;
+    position: absolute;
+    height: 420px;
+}
+form{
+    padding-top: 15px;
+    padding-left: 78px;
+}
+.inputEmail :placeholder-shown{
+    text-align: center;
+}
+.inputPass :placeholder-shown{
+    text-align: center;
+}
+.form-control{
+    width: 350px;
+}
+#tombolRegister{
+    width: 350px;
+}
+
