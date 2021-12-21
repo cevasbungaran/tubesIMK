@@ -3,7 +3,8 @@
 }
 #text{
     color:white;
-    padding-left: 126px;
+    padding-top: 10px;
+    padding-left: 105px;
 }
 .registerBox{
     background:#8E806A;
@@ -12,7 +13,7 @@
     width: 500px;
     box-sizing: border-box;
     border-radius: 20px;
-    top: 30%;
+    top: 24%;
     left: 35%;
     position: absolute;
     height: 420px;
