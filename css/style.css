@@ -1,22 +1,21 @@
-.Register{
-    background-image: url(../buku.jpg);
+.login{
+    background-image: url(../images/buku.jpg);
 }
 #text{
     color:white;
-    padding-top: 10px;
-    padding-left: 105px;
+    padding-left: 126px;
 }
-.registerBox{
+.loginBox{
     background:#8E806A;
     color: white;
     box-sizing: border-box;
     width: 500px;
     box-sizing: border-box;
     border-radius: 20px;
-    top: 24%;
+    top: 30%;
     left: 35%;
     position: absolute;
-    height: 420px;
+    height: 300px;
 }
 form{
     padding-top: 15px;
@@ -31,7 +30,16 @@ form{
 .form-control{
     width: 350px;
 }
-#tombolRegister{
+#tombolLogin{
     width: 350px;
 }
-
+.regisLink{
+    padding-left: 163px;
+    padding-top: 8px;
+}
+.regisLink a{
+    color: white;
+}
+.regisLink a :hover{
+    color: rgb(179, 177, 177);
+}
