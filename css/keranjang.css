@@ -49,13 +49,9 @@ body{
 .booklist{
     padding: 50px 120px; 
 }
-.book2{
-    padding-top: 275px;
-}
-.book3{
-    padding-top: 275px;
-    padding-bottom: 200px;
-}
+.book{
+    padding-bottom: 250px;
+} 
 .desc{
     padding-left: 300px;
 }
@@ -101,7 +97,6 @@ footer {
     background-color: #8e806a;
     color: white;
     padding: 22px;
-    margin-top: relative;
 }
 footer a {
     color: white;

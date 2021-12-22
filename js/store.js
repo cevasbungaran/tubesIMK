@@ -1,13 +1,13 @@
-if (document.readyState=='loading'){
+if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
-}else{
+} else {
     ready()
 }
 
-function ready(){
+function ready() {
     var removeCartItemButtons = document.getElementsByClassName('bi bi-trash')
     console.log(removeCartItemButtons)
-    for (var i=0; i< removeCartItemButtons.length; i++){
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
 /**        button.addEventListener('click', function(event){
@@ -16,77 +16,102 @@ function ready(){
             updateCartTotal()
         }) */}
     var quantityInputs = document.getElementsByClassName('jumlah')
-    for (var i=0; i < quantityInputs.length; i++){
+    for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i]
-        input = quantityInputs('change', quantityChanged)
+        input.addEventListener('change', quantityChanged)
     }
 
-/*     var addToCartButtons = document.getElementsByClassName('submit')
-    for (var i=0; i<addToCartButtons.length; i++){
+    var addToCartButtons = document.getElementsByClassName('addCart')
+    for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
-    } */
+    }
+}
 
-    document.getElementsByClassName('w3-button')[0].addEventListener('click', purchaseClicked)
-} 
-
-function purchaseClicked(){
+function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('booklist')[0]
-    while (cartItems.hasChildNodes()){
+    while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
 }
 
-function removeCartItem(event){
+function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
 
-function quantityChanged(event){
+function quantityChanged(event) {
     var input = event.target
-    if (isNaN(input.value)||input.value<=0){
+    if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
     }
     updateCartTotal()
 }
 
-/* function addToCartClicked(event){
-    var button = eve
-} */
-
-function updateCartRest(){
+function addToCartClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement
+    var title = shopItem.getElementsByClassName('bookTitle')[0].innerText
+    var price = shopItem.getElementsByClassName('bookPrice')[0].innerText
+    var image = shopItem.getElementsByClassName('img')[0].src
+    console.log(title)
+    addItemToCart(title, price, image)
 }
 
-function removeCartItem(event){
+function addItemToCart(title, price, image) {
+    var cartRow = doucment.createElement('div')
+    //cartRow.innerText = title
+    cartRow.classList.add('book')
+    var cartItems = document.getElementsByClassName('booklist')[0]
+    var cartRowContents = `
+    <div class="bookimg1">
+        <img src="${image}" style="width: 200px; position: absolute;">
+    </div>
+    <div class="desc">
+        <p class="${title}"><b>Dunia Sophie</b></p>
+        <p class="${price}">Rp 50.000</p>
+        <div class="btn-group horizontal">
+            <button type="button" class="btn btn-default"><span class="bi bi-trash"></span></button>
+            <input class="jumlah" type="number" value="1" style="width: 50px;">
+        </div>
+    </div>`
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+}
+
+function updateCartRest() {
+}
+
+function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.parentElement.parentElement.remove()
     updateCartTotal()
 }
 
-function updateCartTotal(){
+function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('booklist')[0]
     var cartRows = cartItemContainer.getElementsByClassName('book')
     var total = 0
     var pajak = 0
     var subtotal = 0
-    var jumlah_buku = 0
-    for(var i = 0; i<cartRows.length; i++){
+    for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('harga_buku')[0]
         var quantityElement = cartRow.getElementsByClassName('jumlah')[0]
         var price = parseFloat
-        (priceElement.innerText.replace('Rp ', ''))
+            (priceElement.innerText.replace('Rp ', ''))
         var quantity = quantityElement.value
-        total = total + (price*quantity)
+        total = total + (price * quantity)
         pajak = total * 10 / 100
         subtotal = total + pajak
-        jumlah_buku = jumlah_buku + quantity
     }
-    document.getElementsByClassName('total_buku')[0].innerText = jumlah_buku + ' buku'
+    total = Math.round(total * 1000)
+    pajak = Math.round(pajak * 1000)
+    subtotal = Math.round(subtotal * 1000)
     document.getElementsByClassName('total_bersih')[0].innerText = 'Rp ' + total
     document.getElementsByClassName('total_pajak')[0].innerText = 'Rp ' + pajak
-    document.getElementsByClassName('subtotal_final')[0].innerText = 'Rp ' + subtotal
+    document.getElementsByClassName('subtotal')[0].innerText = 'Rp ' + subtotal
 }
