@@ -1,5 +1,5 @@
 .login{
-    background-image: url(../buku.jpg);
+    background-image: url(../images/buku.jpg);
 }
 #text{
     color:white;
@@ -33,4 +33,13 @@ form{
 #tombolLogin{
     width: 350px;
 }
-
+.regisLink{
+    padding-left: 163px;
+    padding-top: 8px;
+}
+.regisLink a{
+    color: white;
+}
+.regisLink a :hover{
+    color: rgb(179, 177, 177);
+}
