@@ -37,6 +37,10 @@ form{
 p
 {
     padding-top:10px;
-    text-align: center;
+    padding-left: 65px;
 }
+p a{
+    color: white;
+}
+
 
