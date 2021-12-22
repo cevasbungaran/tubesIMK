@@ -26,6 +26,8 @@ function ready() {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
+
+    document.getElementsByClassName('w3-button')[0].addEventListener('click',purchaseClicked)
 }
 
 function purchaseClicked() {
