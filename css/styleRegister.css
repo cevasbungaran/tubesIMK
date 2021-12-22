@@ -34,4 +34,9 @@ form{
 #tombolRegister{
     width: 350px;
 }
+p
+{
+    padding-top:10px;
+    text-align: center;
+}
 
